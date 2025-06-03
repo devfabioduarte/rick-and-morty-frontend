@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import { SearchButton } from "./style"
+import { SearchButton } from "./styles"
 
 interface ButtonProps {
     link : string,
