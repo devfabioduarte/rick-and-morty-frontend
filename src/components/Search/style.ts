@@ -8,13 +8,23 @@ export const SearchInput = styled.input`
     background: none;
     color: white;
     font-family: 'Nunito', sans-serif;
-    width: 250px;
-    position: absolute;
+    position: sticky;
     top: 40%;
     left: 35%;
+    
 
     &::placeholder {
         color: #ffffff80;
     }
 
 `;
+
+export const DivSpaced = styled.div`
+  padding: 70px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 16px;
+`;
+
+// <SearchButton onClick={() => navigate('/loading')}>Search</SearchButton>

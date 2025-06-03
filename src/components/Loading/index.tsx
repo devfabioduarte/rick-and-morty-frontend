@@ -7,12 +7,10 @@ export function Loading() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Redireciona para /characters após 2 segundos
     const timer = setTimeout(() => {
       navigate('/characters');
     }, 500);
 
-    // Limpa o timer quando o componente for desmontado
     return () => clearTimeout(timer);
   }, [navigate]);
 

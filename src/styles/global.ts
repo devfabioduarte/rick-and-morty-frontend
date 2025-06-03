@@ -2,8 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import backgroundImage from '../assets/img/background.jpg';
 
 export const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
-    
     :root {
         --primary-color: #1E1E1E
     }

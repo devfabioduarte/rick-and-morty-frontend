@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import { SearchButton } from "../../components/Button/style";
+import { SearchButton } from "../../components/Button/styles";
 import { Search } from "../../components/Search";
 import { useNavigate } from "react-router-dom";
 
