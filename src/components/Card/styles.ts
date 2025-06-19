@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CardContainer = styled.div`
   background: rgba(30, 30, 30, 0.3);
@@ -6,28 +6,26 @@ export const CardContainer = styled.div`
   border-radius: 8px;
   border: 2px;
   width: 223px;
+  height: 300px;
   margin: 3px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.4);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.4);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 
-  
   &:hover {
     transform: scale(1.04);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.6);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
   }
-  
 `;
 
 export const CardImage = styled.img`
-  width: 223px;
+  width: 100%;
   height: 168px;
   object-fit: cover;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  border-radius: 16px;
 `;
 
 export const CardInfo = styled.div`
@@ -38,7 +36,7 @@ export const CardInfo = styled.div`
   h2 {
     margin: 0 0 8px 0;
     font-size: 1.4rem;
-    font-family: 'Seravek';
+    font-family: "Seravek";
     font-weight: 700;
   }
 
@@ -46,17 +44,17 @@ export const CardInfo = styled.div`
     margin: 4px 0;
     font-size: 1rem;
     opacity: 0.85;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
   }
 `;
 
 export const CharactersGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // Sempre 4 colunas
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  justify-items: center; // Centraliza os cards em cada coluna
-  padding: 32px 0;
+  justify-items: center;
+  padding: 32px;
   width: 100%;
-  max-width: 1200px; // Limita a largura máxima do grid
-  margin: 0 auto; // Centraliza o grid na página
+  max-width: 1200px;
+  margin: 0 auto;
 `;

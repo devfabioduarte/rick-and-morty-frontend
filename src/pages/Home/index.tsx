@@ -1,19 +1,16 @@
 import { Header } from "../../components/Header";
-import { SearchButton } from "../../components/Button/styles";
 import { Search } from "../../components/Search";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-export function Home () {
-  const navigate = useNavigate();
+export function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <>
-    <Header />
-    <div>
-      <Search /> {/* Barra de pesquisa com botão */}
-      <SearchButton onClick={() => navigate('/loading')}>
-      Search
-      </SearchButton>
-    </div>
+      <Header />
+      <div>
+        <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      </div>
     </>
   );
-}   
+}
