@@ -1,22 +1,23 @@
-import { useState } from "react";
 import { SearchInput, DivSpaced } from "./style";
 import { Button } from "../Button";
 
-export function Search() {
-  const [searchTerm, setSearchTerm] = useState("");
+interface SearchProps {
+  searchTerm: string;
+  setSearchTerm: (term: string) => void;
+  onSearch?: () => void;
+}
 
+export function Search({ searchTerm, setSearchTerm }: SearchProps) {
+  const searchUrl = `/characters?search=${searchTerm}`;
   return (
-        <DivSpaced>
-        <SearchInput
-            type="text"
-            placeholder="Search characters"
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-
-        />
-        
-        <Button link="/characters" text="Search"/>
-
-        </DivSpaced>
-    );
+    <DivSpaced>
+      <SearchInput
+        type="text"
+        placeholder="Search characters"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <Button link={searchUrl} text="Search" />
+    </DivSpaced>
+  );
 }
