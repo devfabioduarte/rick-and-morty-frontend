@@ -11,14 +11,12 @@ export async function getCharacters(
   current_page: number;
 }> {
   try {
-    console.log("Fetching page:", page);
     const searchParam = search ? `&name=${search}` : "";
     const response = await fetch(
       `${apiUrl}characters/?page=${page}${searchParam}`
     );
 
     const data = await response.json();
-    console.log("Response from API:", data);
 
     return {
       characters: data.success.characters,
@@ -35,7 +33,7 @@ export async function getCharacterById(id: number): Promise<Character | null> {
   try {
     const response = await fetch(`${apiUrl}/characters/${id}`);
     const data = await response.json();
-    return data;
+    return data.success;
   } catch (error) {
     console.error(`Erro ao buscar personagem ${id}:`, error);
     return null;
