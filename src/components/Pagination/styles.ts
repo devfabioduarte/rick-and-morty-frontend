@@ -4,31 +4,21 @@ export const PaginationContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 30px;
   padding: 24px;
-
-  span {
-    color: white;
-    font-family: "Nunito", sans-serif;
-  }
 `;
 
-export const PageButton = styled.button`
+export const PageButton = styled.button<{ $active?: boolean }>`
   background: none;
-  border: 2px solid white;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
+  border: none;
+  color: ${({ $active }) => ($active ? "yellow" : "#ccc")};
+  font-weight: ${({ $active }) => ($active ? "bold" : "normal")};
+  font-size: 1.2rem;
+  margin: 0 6px;
   cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  transition: 0.2s;
+  outline: none;
 
-  &:hover:not(:disabled) {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  &:hover {
+    color: yellow;
   }
 `;
