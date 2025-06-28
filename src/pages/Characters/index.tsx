@@ -69,7 +69,12 @@ export function Characters() {
           </CharactersGrid>
 
           {/* MODAL */}
-          {selectedId !== null && <CharacterDetail id={selectedId} />}
+          {selectedId && (
+            <CharacterDetail
+              id={selectedId}
+              onClose={() => setSelectedId(null)}
+            />
+          )}
 
           <Pagination
             currentPage={currentPage}

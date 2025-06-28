@@ -7,15 +7,20 @@ export interface Character {
   gender: string;
   origin: {
     name: string;
-    url: string;
+    dimension: string;
+    residents_count?: string;
+    type?: string;
   };
   location: {
     name: string;
-    url: string;
+    dimension?: string;
+    residents_count?: string;
+    type?: string;
   };
   image: string;
   episode: string[];
   url: string;
+  last_seen: string;
 }
 
 export interface SearchBarProps {

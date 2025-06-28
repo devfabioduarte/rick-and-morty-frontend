@@ -1,5 +1,6 @@
 import { type Character } from "../../types/types";
 import { CardContainer, CardImage, CardInfo } from "./styles";
+import { translateStatus } from "../../utils/translateGender";
 
 interface CardProps {
   character: Character;
@@ -12,6 +13,7 @@ export function Card({ character, onClick }: CardProps) {
       <CardImage
         src={character.image || ""}
         alt={character.name || "Sem nome"}
+        dead={translateStatus(character.status) === "dead"}
       />
       <CardInfo>
         <h2> {character.name || "Sem nome"}</h2>
