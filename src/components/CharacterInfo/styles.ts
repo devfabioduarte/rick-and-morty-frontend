@@ -121,7 +121,7 @@ export const ImageContainer = styled.div`
 
 export const Title = styled.h1`
   font-size: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: right;
   letter-spacing: 10px;
   color: yellow;
@@ -140,7 +140,7 @@ export const Text = styled.div`
   font-family: "Nunito", sans-serif;
 
   h2 {
-    margin-bottom: 1px;
+    margin-bottom: 10px;
     font-size: 45px;
     color: white;
   }
@@ -151,8 +151,9 @@ export const Text = styled.div`
   }
 
   h4 {
+    margin-bottom: 10px;
     font-size: 25px;
-    gap: 8px;
+    gap: 10px;
     color: #ffffff80;
     display: inline-flex;
     align-items: center;
